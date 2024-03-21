@@ -1,4 +1,3 @@
-package br.senai.sp.jandira.mytrips
 
 import android.graphics.drawable.Icon
 import android.os.Bundle
@@ -22,10 +21,12 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.extended.R
 import androidx.compose.material.icons.filled.AddAPhoto
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.CameraAlt
 import androidx.compose.material.icons.filled.Email
+import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Smartphone
@@ -49,6 +50,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.modifier.modifierLocalOf
 import androidx.compose.ui.res.painterResource
@@ -482,7 +484,8 @@ fun SignUp() {
             .fillMaxWidth()
             .padding(
                 end = 15.dp,
-                start = 15.dp),
+                start = 15.dp
+            ),
             onClick = { /*TODO*/ },
             shape = RoundedCornerShape(12.dp),
             colors = ButtonDefaults.buttonColors(
@@ -533,6 +536,35 @@ fun SignUp() {
     }
 }
 
+@Composable
+fun Home(){
+    Column {
+        Card(modifier = Modifier
+            .fillMaxWidth()
+            .height(190.dp),
+            shape = RoundedCornerShape(0)
+        ) {
+            Image(
+                modifier = Modifier
+                    .fillMaxSize(),
+                painter = painterResource(id = br.senai.sp.jandira.mytrips.R.drawable.paris),
+                contentDescription = "Paris",
+                contentScale = ContentScale.Crop
+            )
+
+            Column(modifier = Modifier
+                .background(color = Color.Cyan)) {
+                androidx.compose.material3.Icon(
+                    imageVector = Icons.Default.LocationOn,
+                    contentDescription = "",
+                    modifier = Modifier
+
+                )
+            }
+        }
+    }
+}
+
 
 //@Preview(showBackground = true, showSystemUi = true)
 //@Composable
@@ -541,11 +573,19 @@ fun SignUp() {
 //        Login()
 //    }
 //}
+//
+//@Preview(showBackground = true, showSystemUi = true)
+//@Composable
+//fun SignUpPreview() {
+//    MyTripsTheme {
+//        SignUp()
+//    }
+//}
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun SignUpPreview() {
+fun HomePreview() {
     MyTripsTheme {
-        SignUp()
+        Home()
     }
 }
