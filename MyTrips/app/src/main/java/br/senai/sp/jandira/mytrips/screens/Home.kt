@@ -16,15 +16,16 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -43,7 +44,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.senai.sp.jandira.mytrips.R
-import br.senai.sp.jandira.mytrips.ui.theme.MyTripsTheme
 
 @Composable
 fun Home(){
@@ -54,6 +54,7 @@ fun Home(){
 
     Column(modifier = Modifier
         .fillMaxSize()
+        .background(Color(0xffF6F6F6)),
     ) {
         Surface(modifier = Modifier
             .fillMaxWidth()
@@ -135,7 +136,7 @@ fun Home(){
         Column() {
             Text(
                 text = "Categories",
-                fontSize = 23.sp,
+                fontSize = 20.sp,
                 modifier = Modifier
                     .padding(start = 15.dp, bottom = 15.dp),
                 color = Color(0xff565454)
@@ -176,26 +177,43 @@ fun Home(){
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        OutlinedTextField(modifier = Modifier
-            .fillMaxWidth()
-            .padding(15.dp),
+        OutlinedTextField(
+
+            shape = RoundedCornerShape(20.dp),
+
             value = searchState.value,
             onValueChange = {
                 searchState.value = it
             },
+            colors = OutlinedTextFieldDefaults.colors(
+                unfocusedContainerColor = Color.White,
+                focusedContainerColor = Color.White,
+                unfocusedBorderColor = Color.Transparent,
+                focusedBorderColor = Color.Transparent
+            ),
             placeholder = {
                 Text(
                     text = "Search your destiny",
                     color = Color(0xffA09C9C),
-                    fontSize = 24.sp
+                    fontSize = 20.sp
                     )
             },
+
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(15.dp),
+
             trailingIcon = {
                 Icon(
                     imageVector = Icons.Default.Search,
-                    contentDescription = ""
+                    contentDescription = "",
+                    tint = Color(0xffb7b7b7),
+
+                    modifier = Modifier
+                        .size(30.dp)
                 )
-            }
+            },
+
         )
 
         Spacer(modifier = Modifier.height(20.dp))
@@ -203,7 +221,7 @@ fun Home(){
         Column {
             Text(
                 text = "Past Trips",
-                fontSize = 23.sp,
+                fontSize = 20.sp,
                 modifier = Modifier
                     .padding(start = 15.dp),
                 color = Color(0xff565454)
@@ -217,13 +235,60 @@ fun Home(){
                         top = 10.dp
                     )
             ){
-                items(2){
+                items(6){
                     Card(modifier = Modifier
-                        .height(200.dp)
+                        .height(250.dp)
                         .fillMaxWidth()
-                        .padding(5.dp)
+                        .padding(5.dp),
+                        colors = CardDefaults.cardColors(
+                            containerColor = Color.White,
+                            disabledContainerColor = Color.White
+                        ),
+                        elevation = CardDefaults.cardElevation(
+                            defaultElevation = 4.dp
+                        )
                     ){
+                        Column(
+                            modifier = Modifier
+                                .padding(6.dp)
+                                .fillMaxSize(),
+                            verticalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            Card(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .height(120.dp),
+                                shape = RoundedCornerShape(8.dp)
+                            ) {
+                                Surface(modifier = Modifier
+                                    .fillMaxSize()) {
+                                    Image(
+                                        painter = painterResource(id = R.drawable.london),
+                                        contentDescription = "Londres",
+                                        contentScale = ContentScale.Crop
+                                    )
+                                }
+                            }
+                            Text(modifier = Modifier
+                                    .padding(vertical = 5.dp),
+                                text = "London, 2019",
+                                color = Color(0xffCF07F0),
+                                fontSize = 16.sp,
+                            )
 
+                            Text(modifier = Modifier
+                                    .padding(vertical = 5.dp),
+                                text = "London is the capital and largest city of  the United Kingdom, with a population of just under 9 million.",
+                                color = Color(0xffA09C9C)
+                            )
+                            Text(
+                                modifier = Modifier
+                                    .align(Alignment.End)
+                                    .padding(5.dp),
+                                text = "18 Feb - 21 Feb",
+                                color = Color(0xffCF07F0)
+                            )
+                        }
                     }
                 }
         }

@@ -172,7 +172,7 @@ fun Login(controleNavegacao: NavHostController) {
             Button(
                 onClick = {
                           if (emailState.value == "gab@email.com" && passwordState.value == "123"){
-                            msgErroState.value == ""
+                              msgErroState.value == ""
 
                               controleNavegacao.navigate("home")
                           } else {
