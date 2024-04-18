@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -44,9 +45,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.senai.sp.jandira.mytrips.R
+import br.senai.sp.jandira.mytrips.repositorio.CategoriaRepositorio
 
 @Composable
 fun Home(){
+
+    val categorias = CategoriaRepositorio().listarTodasAsCategorias()
 
     var searchState = remember {
         mutableStateOf("")
@@ -144,7 +148,7 @@ fun Home(){
 
             LazyRow(modifier = Modifier
                 .padding(start = 15.dp)){
-                items(4){
+                items(categorias){
                     Card(modifier = Modifier
                         .height(100.dp)
                         .width(150.dp)
@@ -158,7 +162,7 @@ fun Home(){
                             verticalArrangement = Arrangement.Center
                         ) {
                             Image(
-                                painter = painterResource(id = R.drawable.mountain),
+                                painter = if (it.icone == null) painterResource(id = R.drawable.noimage) else it.icone!!,
                                 contentDescription = "Ícone de montanhas, com árvores em volta",
                                 modifier = Modifier
                                     .height(50.dp)
