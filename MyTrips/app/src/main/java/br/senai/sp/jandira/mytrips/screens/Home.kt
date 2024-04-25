@@ -46,11 +46,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.senai.sp.jandira.mytrips.R
 import br.senai.sp.jandira.mytrips.repositorio.CategoriaRepositorio
+import br.senai.sp.jandira.mytrips.repositorio.ViagemRepositorio
+import br.senai.sp.jandira.mytrips.utilitarios.encurtadorDeDatas
 
 @Composable
 fun Home(){
 
     val categorias = CategoriaRepositorio().listarTodasAsCategorias()
+    val viagens = ViagemRepositorio().listarTodasAsViagens()
 
     var searchState = remember {
         mutableStateOf("")
@@ -161,15 +164,22 @@ fun Home(){
                             horizontalAlignment = Alignment.CenterHorizontally,
                             verticalArrangement = Arrangement.Center
                         ) {
-                            Image(
-                                painter = if (it.icone == null) painterResource(id = R.drawable.noimage) else it.icone!!,
-                                contentDescription = "Ícone de montanhas, com árvores em volta",
+                            Card(colors = CardDefaults.cardColors(Color.Transparent),
                                 modifier = Modifier
-                                    .height(50.dp)
-                            )
+                                    .height(40.dp)
+                                    .padding(bottom = 7.dp)) {
+                                Image(
+                                    painter = if (it.icone == null) painterResource(id = R.drawable.noimage) else it.icone!!,
+                                    contentDescription = "",
+                                    contentScale = ContentScale.Fit,
+                                    modifier = Modifier
+                                        .height(40.dp)
+                                )
+                            }
+
                             Text(modifier = Modifier
                                 .offset(0.dp, -10.dp),
-                                text = "Mountain",
+                                text = it.nome,
                                 fontSize = 22.sp,
                                 color = Color.White
                             )
@@ -239,9 +249,9 @@ fun Home(){
                         top = 10.dp
                     )
             ){
-                items(6){
+                items(viagens){
                     Card(modifier = Modifier
-                        .height(250.dp)
+                        .height(290.dp)
                         .fillMaxWidth()
                         .padding(5.dp),
                         colors = CardDefaults.cardColors(
@@ -267,29 +277,29 @@ fun Home(){
                                 Surface(modifier = Modifier
                                     .fillMaxSize()) {
                                     Image(
-                                        painter = painterResource(id = R.drawable.london),
-                                        contentDescription = "Londres",
+                                        painter = if (it.imagem == null) painterResource(id = R.drawable.noimage) else it.imagem!!,
+                                        contentDescription = "",
                                         contentScale = ContentScale.Crop
                                     )
                                 }
                             }
                             Text(modifier = Modifier
                                     .padding(vertical = 5.dp),
-                                text = "London, 2019",
+                                text = "${it.destino}, ${it.dataPartida.year}",
                                 color = Color(0xffCF07F0),
                                 fontSize = 16.sp,
                             )
 
                             Text(modifier = Modifier
                                     .padding(vertical = 5.dp),
-                                text = "London is the capital and largest city of  the United Kingdom, with a population of just under 9 million.",
+                                text = "${it.descricao}",
                                 color = Color(0xffA09C9C)
                             )
                             Text(
                                 modifier = Modifier
                                     .align(Alignment.End)
                                     .padding(5.dp),
-                                text = "18 Feb - 21 Feb",
+                                text = "${encurtadorDeDatas(it.dataChegada, it.dataPartida)}",
                                 color = Color(0xffCF07F0)
                             )
                         }

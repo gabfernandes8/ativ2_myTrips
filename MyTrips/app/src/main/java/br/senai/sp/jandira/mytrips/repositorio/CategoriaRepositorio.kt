@@ -15,7 +15,7 @@ class CategoriaRepositorio {
         val mountain = Categoria(
             id = 1,
             nome = "Mountain",
-            icone = painterResource(id = R.drawable.mountain)
+            icone = painterResource(id = R.drawable.mountains)
         )
 
         val snow = Categoria(
