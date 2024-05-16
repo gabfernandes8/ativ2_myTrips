@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyTrips</string>
+    <string name="title_mountain">山</string>
+    <string name="title_snow">雪</string>
+    <string name="title_beach">海滩</string>
+
+    <string name="name_london">伦敦</string>
+    <string name="description_london">伦敦是英国的首都和最大城市，人口略低于 900 万。</string>
+
+    <string name="name_porto">波尔图</string>
+    <string name="description_porto">波尔图是葡萄牙第二大城市，波尔图区首府，伊比利亚半岛主要城区之一...</string>
+</resources>

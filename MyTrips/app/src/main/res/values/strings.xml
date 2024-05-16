@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">MyTrips</string>
+    <string name="title_mountain">Mountain</string>
+    <string name="title_snow">Snow</string>
+    <string name="title_beach">Beach</string>
+
+    <string name="name_london">London</string>
+    <string name="description_london">London is the capital and largest city of  the United Kingdom, with a population of just under 9 million.</string>
+
+    <string name="name_porto">Porto</string>
+    <string name="description_porto">Porto is the second city in Portugal, the capital of the Oporto District, and one of the Iberian Peninsula's major urban areas...</string>
+
 </resources>

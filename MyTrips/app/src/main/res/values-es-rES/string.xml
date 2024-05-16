@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyTrips</string>
+    <string name="title_mountain">Montaña</string>
+    <string name="title_snow">Nieve</string>
+    <string name="title_beach">Playa</string>
+
+    <string name="name_london">Londres</string>
+    <string name="description_london">Londres es la capital y ciudad más grande del Reino Unido, con una población de poco menos de 9 millones.</string>
+
+    <string name="name_porto">Puerto</string>
+    <string name="description_porto">Puerto es la segunda ciudad de Portugal, capital del Distrito de Oporto y una de las principales zonas urbanas de la Península Ibérica...</string>
+
+</resources>
