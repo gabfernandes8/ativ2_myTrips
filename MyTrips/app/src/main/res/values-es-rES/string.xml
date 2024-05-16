@@ -2,14 +2,40 @@
 <resources>
 
     <string name="app_name">MyTrips</string>
+
+    <!--    LOGIN-->
+    <string name="login">Entrar</string>
+    <string name="login_desc">Por favor inicie sesión para continuar.</string>
+    <string name="email">Correo Electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="signin">ENTRAR</string>
+    <string name="desc_signin">¿No tienes una cuenta?</string>
+    <string name="signin_desc">Registro</string>
+
+    <!--    SIGNUP-->
+    <string name="signup">Registro</string>
+    <string name="signup_desc">Crea una cuenta nueva</string>
+    <string name="phone">Teléfono</string>
+    <string name="over18">¿Más de 18 años?</string>
+    <string name="createacc">CREA UNA CUENTA</string>
+    <string name="desc">¿Ya tienes una cuenta?</string>
+    <string name="signin_up">Entre</string>
+
+    <!--    home-->
+    <string name="location">Tu estás en Paris</string>
+    <string name="categories">Categorías</string>
+
     <string name="title_mountain">Montaña</string>
     <string name="title_snow">Nieve</string>
     <string name="title_beach">Playa</string>
+
+    <string name="search">Busca tu destino</string>
+    <string name="past_trips">Últimos Viajes</string>
 
     <string name="name_london">Londres</string>
     <string name="description_london">Londres es la capital y ciudad más grande del Reino Unido, con una población de poco menos de 9 millones.</string>
 
     <string name="name_porto">Puerto</string>
-    <string name="description_porto">Puerto es la segunda ciudad de Portugal, capital del Distrito de Oporto y una de las principales zonas urbanas de la Península Ibérica...</string>
+    <string name="description_porto">Puerto es la segunda ciudad de Portugal, capital del Distrito de Oporto y una de las principales zonas urbanas de la Península Ibérica…</string>
 
 </resources>

@@ -1,13 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MyTrips</string>
+
+    <!--    LOGIN-->
+    <string name="login">进入</string>
+    <string name="login_desc">请登录访问更多内容。</string>
+    <string name="email">电子邮件</string>
+    <string name="password">密码</string>
+    <string name="signin">进入</string>
+    <string name="desc_signin">没有帐户</string>
+    <string name="signin_desc">登记</string>
+
+    <!--    SIGNUP-->
+    <string name="signup">登记</string>
+    <string name="signup_desc">创建一个新账户</string>
+    <string name="phone">电话</string>
+    <string name="over18">年满18岁？</string>
+    <string name="createacc">创建一个帐户</string>
+    <string name="desc">已经有帐户</string>
+    <string name="signin_up">介于两者之间</string>
+
+    <!--    home-->
+    <string name="location">你在巴黎</string>
+    <string name="categories">类别</string>
+
     <string name="title_mountain">山</string>
     <string name="title_snow">雪</string>
     <string name="title_beach">海滩</string>
+
+    <string name="search">寻找你的命运</string>
+    <string name="past_trips">最新游记</string>
 
     <string name="name_london">伦敦</string>
     <string name="description_london">伦敦是英国的首都和最大城市，人口略低于 900 万。</string>
 
     <string name="name_porto">波尔图</string>
-    <string name="description_porto">波尔图是葡萄牙第二大城市，波尔图区首府，伊比利亚半岛主要城区之一...</string>
+    <string name="description_porto">波尔图是葡萄牙第二大城市，波尔图区首府，伊比利亚半岛主要城区之一…</string>
 </resources>

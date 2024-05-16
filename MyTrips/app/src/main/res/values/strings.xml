@@ -1,13 +1,38 @@
 <resources>
     <string name="app_name">MyTrips</string>
+
+<!--    LOGIN-->
+    <string name="login">Login</string>
+    <string name="login_desc">Please sign in to continue.</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="signin">SIGN IN</string>
+    <string name="desc_signin">Don\'t have an account?</string>
+    <string name="signin_desc">Sign up</string>
+
+    <!--    SIGNUP-->
+    <string name="signup">Sign Up</string>
+    <string name="signup_desc">Create a new account</string>
+    <string name="phone">Phone</string>
+    <string name="over18">Over 18?</string>
+    <string name="createacc">CREATE ACCOUNT</string>
+    <string name="desc">Already have an account?</string>
+    <string name="signin_up">Sign in</string>
+
+<!--    home-->
+    <string name="location">You\'re in Paris</string>
+    <string name="categories">Categories</string>
     <string name="title_mountain">Mountain</string>
     <string name="title_snow">Snow</string>
     <string name="title_beach">Beach</string>
+
+    <string name="search">Search your destiny</string>
+    <string name="past_trips">Past Trips</string>
 
     <string name="name_london">London</string>
     <string name="description_london">London is the capital and largest city of  the United Kingdom, with a population of just under 9 million.</string>
 
     <string name="name_porto">Porto</string>
-    <string name="description_porto">Porto is the second city in Portugal, the capital of the Oporto District, and one of the Iberian Peninsula's major urban areas...</string>
+    <string name="description_porto">Porto is the second city in Portugal, the capital of the Oporto District, and one of the Iberian Peninsula\'s major urban areas...</string>
 
 </resources>

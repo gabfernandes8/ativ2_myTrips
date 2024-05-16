@@ -2,14 +2,40 @@
 <resources>
 
     <string name="app_name">MyTrips</string>
+
+    <!--    LOGIN-->
+    <string name="login">Entrar</string>
+    <string name="login_desc">Por favor entre para continuar.</string>
+    <string name="email">Email</string>
+    <string name="password">Senha</string>
+    <string name="signin">ENTRAR</string>
+    <string name="desc_signin">Não tem uma conta?</string>
+    <string name="signin_desc">Cadastre-se</string>
+
+    <!--    SIGNUP-->
+    <string name="signup">Cadastre-se</string>
+    <string name="signup_desc">Criar uma nova conta</string>
+    <string name="phone">Telefone</string>
+    <string name="over18">Maior de 18?</string>
+    <string name="createacc">CRIAR CONTA</string>
+    <string name="desc">Já tem uma conta?</string>
+    <string name="signin_up">Entre</string>
+
+    <!--    home-->
+    <string name="location">Você está em Paris</string>
+    <string name="categories">Categorias</string>
+
     <string name="title_mountain">Montanha</string>
     <string name="title_snow">Neve</string>
     <string name="title_beach">Praia</string>
+
+    <string name="search">Procurar seu destino</string>
+    <string name="past_trips">Últimas Viagens</string>
 
     <string name="name_london">Londres</string>
     <string name="description_london">Londres é a capital e maior cidade do Reino Unido, com uma população de pouco menos de 9 milhões.</string>
 
     <string name="name_porto">Porto</string>
-    <string name="description_porto">Porto é a segunda cidade de Portugal, capital do Distrito do Porto e uma das principais áreas urbanas da Península Ibérica...</string>
+    <string name="description_porto">Porto é a segunda cidade de Portugal, capital do Distrito do Porto e uma das principais áreas urbanas da Península Ibérica…</string>
 
 </resources>

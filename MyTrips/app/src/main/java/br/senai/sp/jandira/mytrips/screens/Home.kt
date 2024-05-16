@@ -39,6 +39,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -115,7 +116,7 @@ fun Home(){
                             tint = Color.White
                         )
                         Text(
-                            text = "You're in Paris",
+                            text = stringResource(id = R.string.location),
                             fontSize = 20.sp,
                             color = Color.White,
                             style = TextStyle(
@@ -142,7 +143,7 @@ fun Home(){
 
         Column() {
             Text(
-                text = "Categories",
+                text = stringResource(id = R.string.categories),
                 fontSize = 20.sp,
                 modifier = Modifier
                     .padding(start = 15.dp, bottom = 15.dp),
@@ -207,7 +208,7 @@ fun Home(){
             ),
             placeholder = {
                 Text(
-                    text = "Search your destiny",
+                    text = stringResource(id = R.string.search),
                     color = Color(0xffA09C9C),
                     fontSize = 20.sp
                     )
@@ -234,7 +235,7 @@ fun Home(){
 
         Column {
             Text(
-                text = "Past Trips",
+                text = stringResource(id = R.string.past_trips),
                 fontSize = 20.sp,
                 modifier = Modifier
                     .padding(start = 15.dp),

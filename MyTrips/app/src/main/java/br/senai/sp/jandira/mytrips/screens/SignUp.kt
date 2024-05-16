@@ -38,11 +38,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import br.senai.sp.jandira.mytrips.R
 
 @Composable
 fun SignUp(controleNavegacao: NavHostController) {
@@ -92,7 +94,7 @@ fun SignUp(controleNavegacao: NavHostController) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "Sign Up",
+                text = stringResource(id = R.string.signup),
                 color = Color(0xffcf05f0),
                 fontSize = 35.sp,
                 fontWeight = FontWeight.ExtraBold,
@@ -100,7 +102,7 @@ fun SignUp(controleNavegacao: NavHostController) {
                     .padding(bottom = 2.dp)
             )
             Text(
-                text = "Create a new account",
+                text = stringResource(id = R.string.signup_desc),
                 color = Color(0xffa09c9c)
             )
             Box(modifier = Modifier
@@ -177,7 +179,7 @@ fun SignUp(controleNavegacao: NavHostController) {
                     )
                 },
                 label = {
-                    Text(text = "Username")
+                    Text(text = stringResource(id = R.string.email))
                 },
                 colors = OutlinedTextFieldDefaults
                     .colors(
@@ -212,7 +214,7 @@ fun SignUp(controleNavegacao: NavHostController) {
                     )
                 },
                 label = {
-                    Text(text = "Phone")
+                    Text(text = stringResource(id = R.string.phone))
                 },
                 colors = OutlinedTextFieldDefaults
                     .colors(
@@ -280,7 +282,7 @@ fun SignUp(controleNavegacao: NavHostController) {
                     )
                 },
                 label = {
-                    Text(text = "Password")
+                    Text(text = stringResource(id = R.string.password))
                 },
                 colors = OutlinedTextFieldDefaults
                     .colors(
@@ -309,7 +311,7 @@ fun SignUp(controleNavegacao: NavHostController) {
                 )
             )
             Text(
-                text = "Over 18?"
+                text = stringResource(id = R.string.over18)
             )
         }
 
@@ -330,7 +332,7 @@ fun SignUp(controleNavegacao: NavHostController) {
             )
         ) {
             Text(
-                text = "CREATE ACCOUNT",
+                text = stringResource(id = R.string.createacc),
                 fontSize = 18.sp,
                 fontWeight = FontWeight.ExtraBold,
                 modifier = Modifier
@@ -344,7 +346,7 @@ fun SignUp(controleNavegacao: NavHostController) {
         ) {
             Text(modifier = Modifier
                 .padding(end = 3.dp),
-                text = "Already have an account?",
+                text = stringResource(id = R.string.desc),
                 color = Color(0xffa09c9c)
             )
             Text(modifier = Modifier
@@ -352,7 +354,7 @@ fun SignUp(controleNavegacao: NavHostController) {
                 .clickable {
                     controleNavegacao.navigate("login")
                 },
-                text = "Sign in",
+                text = stringResource(id = R.string.signin_up),
                 color = Color(0xffcf06f0),
                 fontWeight = FontWeight.ExtraBold
             )

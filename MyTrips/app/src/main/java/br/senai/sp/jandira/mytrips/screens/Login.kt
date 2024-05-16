@@ -29,11 +29,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import br.senai.sp.jandira.mytrips.R
 
 @Composable
 fun Login(controleNavegacao: NavHostController) {
@@ -79,13 +81,13 @@ fun Login(controleNavegacao: NavHostController) {
                 .padding(20.dp)
         ) {
             Text(
-                text = "Login",
+                text = stringResource(id = R.string.login),
                 color = Color(0xffCF06F0),
                 fontSize = 58.sp,
                 fontWeight = FontWeight.ExtraBold
             )
             Text(
-                text = "Please sign in to continue.",
+                text = stringResource(id = R.string.login_desc),
                 color = Color(0xffa09c9c),
                 fontSize = 20.sp
             )
@@ -117,7 +119,7 @@ fun Login(controleNavegacao: NavHostController) {
                     )
                 },
                 label = {
-                    Text(text = "E-mail")
+                    Text(text = stringResource(id = R.string.email))
                 },
                 colors = OutlinedTextFieldDefaults
                     .colors(
@@ -145,7 +147,7 @@ fun Login(controleNavegacao: NavHostController) {
                     )
                 },
                 label = {
-                    Text(text = "Password")
+                    Text(text = stringResource(id = R.string.password))
                 },
                 colors = OutlinedTextFieldDefaults
                     .colors(
@@ -185,7 +187,7 @@ fun Login(controleNavegacao: NavHostController) {
                 )
             ) {
                 Text(
-                    text = "SIGN IN",
+                    text = stringResource(id = R.string.signin),
                     fontSize = 18.sp,
                     fontWeight = FontWeight.ExtraBold,
                     modifier = Modifier
@@ -202,13 +204,13 @@ fun Login(controleNavegacao: NavHostController) {
                 )
             ){
                 Text(
-                    text = "Don't have an account?",
+                    text = stringResource(id = R.string.desc),
                     color = Color(0xffa09c9c),
                     modifier = Modifier
                         .padding(end = 4.dp)
                 )
                 Text(
-                    text = "Sign up",
+                    text = stringResource(id = R.string.signin_desc),
                     color = Color(0xffcf06f0),
                     fontWeight = FontWeight.ExtraBold,
                     modifier = Modifier.clickable {
