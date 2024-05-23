@@ -146,7 +146,7 @@ fun Login(controleNavegacao: NavHostController) {
                             .size(40.dp)
                     )
                 },
-                label = {
+                label = {@
                     Text(text = stringResource(id = R.string.password))
                 },
                 colors = OutlinedTextFieldDefaults
